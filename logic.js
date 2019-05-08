@@ -5,6 +5,7 @@ const currentWeather = {
 
   showWeather: function () {
     const testButton = document.getElementById('testButton');
+
     testButton.addEventListener('click', function (zipCode, country) {
       const searchZipTextInput = document.getElementById('searchZipTextInput');
       const searchCountryTextInput = document.getElementById('searchCountryTextInput')
