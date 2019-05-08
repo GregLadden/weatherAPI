@@ -30,7 +30,7 @@ const currentWeather = {
   displayData: function (data) {
 
     if (data.cod === '404') {
-      document.getElementById('cityName').innerHTML = `${data.message}. Please try again`;
+      document.getElementById('cityName').innerHTML = `Sorry ${data.message}. Please try again`;
     } else {
       const currentTemp = Math.round(((parseFloat(data.main.temp) - 273.15) * 1.8) + 32);
       const tempMax = Math.round(((parseFloat(data.main.temp_max) - 273.15) * 1.8) + 32);
