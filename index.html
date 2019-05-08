@@ -6,23 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Weather API</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1> <span id="cityName"></span></h1>
+  <h1>Search City</h1>
+  <div>
+    <button id="testButton">Search</button>
+    <input id="searchZipTextInput" type="text">
+    <input id="searchCountryTextInput" type="text">
+  </div>
   <ul>
+    <h2> <span id="cityName"></span></h2>
     <li>
-      <p>temp: <span>68 degrees</span></p>
+      <p>temp: <span id="temp"></span></p>
     </li>
     <li>
-      <p>Hi: <span>68 degrees</span></p>
+      <p>Hi: <span id="todayHi"></span></p>
     </li>
     <li>
-      <p>Low: <span>68 degrees</span></p>
+      <p>Low: <span id="todayLow"></span></p>
     </li>
     <li>
-      <p>Humidity: <span>68 degrees</span></p>
+      <p>Humidity: <span id="currentHumidity"></span></p>
     </li>
   </ul>
 
