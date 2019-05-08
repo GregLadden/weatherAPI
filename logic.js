@@ -33,15 +33,20 @@ const currentWeather = {
       document.getElementById('cityName').innerHTML = `${data.message}. Please try again`;
     } else {
       const currentTemp = Math.round(((parseFloat(data.main.temp) - 273.15) * 1.8) + 32);
-      const todayHi = Math.round(((parseFloat(data.main.temp_max) - 273.15) * 1.8) + 32);
-      const todayLow = Math.round(((parseFloat(data.main.temp_min) - 273.15) * 1.8) + 32);
-      const currentHumidity = data.main.humidity;
+      const tempMax = Math.round(((parseFloat(data.main.temp_max) - 273.15) * 1.8) + 32);
+      const tempMin = Math.round(((parseFloat(data.main.temp_min) - 273.15) * 1.8) + 32);
+      const humidity = data.main.humidity;
+      const cityName = document.getElementById('cityName')
+      const temp = document.getElementById('temp')
+      const todayHi = document.getElementById('todayHi')
+      const todayLow = document.getElementById('todayLow')
+      const currentHumidity = document.getElementById('currentHumidity')
 
-      document.getElementById('cityName').innerHTML = data.name;
-      document.getElementById('temp').innerHTML = `${currentTemp} &deg`;;
-      document.getElementById('todayHi').innerHTML = `${todayHi} &deg`;;
-      document.getElementById('todayLow').innerHTML = `${todayLow} &deg`;;
-      document.getElementById('currentHumidity').innerHTML = `${currentHumidity}%`;
+      cityName.innerHTML = data.name;
+      temp.innerHTML = `${currentTemp} &deg`;;
+      todayHi.innerHTML = `${tempMax} &deg`;;
+      todayLow.innerHTML = `${tempMin} &deg`;;
+      currentHumidity.innerHTML = `${humidity}%`;
     }
   }
 }
